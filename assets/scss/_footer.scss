@@ -1,0 +1,24 @@
+@import "variables";
+
+.hero-footer-copy {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: $white;
+  font-size: 0.75rem;
+  margin-top: 5rem;
+  /* Animation */
+  animation-delay: 0s;
+}
+
+.hero-footer-copy .copy-date {
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.hero-footer-copy .copy-name {
+  font-size: $font-size;
+  font-weight: 900;
+  font-family: $font-work-sans;
+}

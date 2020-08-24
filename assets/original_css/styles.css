@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("_normalize.css");
+@import url("_keyframes.css");
+@import url("_navigation.css");
+
+:root {
+  --font-work-sans: "Work Sans", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-size: 16px;
+  --bg-color: #efefef;
+  --tx-color: #2e2e2e;
+  --white: rgb(255, 255, 255);
+  --f-400: 400;
+  --f-700: 700;
+  --f-900: 900;
+  --app-height: 100%;
+  --primary-color: rgb(0, 134, 255);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+.fade-in-left {
+  opacity: 0;
+  animation: fadeInLeft ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+.fade-in-right {
+  opacity: 0;
+  animation: fadeInLeft ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+.fade-in-top {
+  opacity: 0;
+  animation: fadeInTop ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+.fade-in-bottom {
+  opacity: 0;
+  animation: fadeInBottom ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+body {
+  font-family: var(--font-montserrat);
+  background: var(--bg-color);
+  @media not all and (hover: hover) {
+    height: var(--app-height);
+  }
+}
+
+.hero {
+  display: flex;
+  position: relative;
+  color: var(--white);
+  align-items: center;
+  background: #00a2ff;
+  justify-content: center;
+  min-height: -webkit-fill-available;
+  @media not all and (hover: hover) {
+    height: var(--app-height);
+  }
+}
+
+.hero .overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 134, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 134, 255, 1) 0%,
+    rgba(0, 194, 255, 1) 100%
+  );
+  /* clip-path: circle(66% at 47% 2%); */
+  /* clip-path: polygon(0 0, 0% 100%, 100% 0); */
+  /* clip-path: polygon(0 0, 80% 0, 37% 100%, 0% 100%); */
+  clip-path: polygon(0 0, 84% 0, 36% 100%, 0% 100%);
+}
+
+.hero .hero-title-1 {
+  font-weight: var(--f-900);
+  font-family: var(--font-work-sans);
+  /*Animation*/
+  animation-delay: 0.5s;
+}
+
+.hero .hero-title-2 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  font-weight: var(--f-700);
+  /*Animation*/
+  animation-delay: 0.6s;
+}
+
+.hero .h-divide {
+  width: 130px;
+  border-bottom: 5px solid #fafafa;
+  /*Animation*/
+  animation-delay: 0.7s;
+}
+
+.hero .hero-msg {
+  width: 500px;
+  margin-top: 0.75rem;
+  animation-delay: 0.8s;
+  /*Animation*/
+  animation-delay: 0.9s;
+}
+
+.hero .hero-actions {
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+  /*Animation*/
+  animation-delay: 1s;
+}
+
+.hero .hero-actions .btn-hero-donate {
+  border: 0px;
+  display: flex;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 25px;
+  padding: 0.45rem 1rem;
+  color: var(--white);
+  background: transparent;
+  border: 1px solid var(--white);
+  justify-content: space-between;
+  box-shadow: 5px 10px 20px rgba(40, 40, 40, 0.3);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.hero .hero-actions .btn-hero-donate:hover {
+  box-shadow: 5px 10px 20px rgba(40, 40, 40, 0.5);
+}
+
+.hero .hero-actions .btn-hero-donate .donate-icon {
+  margin-left: 3rem;
+  color: var(--primary-color);
+  /*Animation*/
+  animation-delay: 1.1s;
+}
+
+.hero .hero-actions .btn-hero-buy {
+  width: 12rem;
+  border-radius: 25px;
+  color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.hero .hero-socials {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.hero .hero-socials .social-link {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  margin-left: 1rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.hero .hero-socials .social-link:first-child {
+  margin-left: 0rem;
+}
+
+.hero .hero-socials .social-link:hover {
+  background: rgb(0, 134, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 134, 255, 1) 0%,
+    rgba(0, 194, 255, 1) 100%
+  );
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.hero .hero-socials .social-twitter {
+  animation-delay: 1.2s;
+}
+.hero .hero-socials .social-facebook {
+  animation-delay: 1.3s;
+}
+.hero .hero-socials .social-instgram {
+  animation-delay: 1.4s;
+}
+.hero .hero-socials .social-youtube {
+  animation-delay: 1.5s;
+}
+
+.hero-copy {
+  font-size: 0.75rem;
+  margin-top: 5rem;
+  animation-delay: 0s;
+}
+
+.hero-copy .copy-date {
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.hero-copy .copy-name {
+  font-weight: 900;
+  font-family: var(--font-work-sans);
+}
+
+.hero .hero-img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.hero .hero-img-container img {
+  margin-left: -2rem;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .hero {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    min-height: -webkit-fill-available;
+  }
+
+  .hero .hero-title-1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .hero {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    min-height: -webkit-fill-available;
+  }
+
+  .hero .hero-title-1 {
+    font-size: 4.5rem;
+  }
+}

@@ -1,0 +1,33 @@
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY();
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX();
+  }
+}
+#app nav.navbar {
+  /*Animation*/
+  opacity: 0;
+  animation: fadeInTop ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+
+#app nav.navbar .navbar-brand {
+  font-family: var(--font-work-sans);
+  font-weight: 900;
+}

@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY();
+  }
+}
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY();
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX();
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX();
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+.fade-in-left {
+  opacity: 0;
+  animation: fadeInLeft ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+.fade-in-right {
+  opacity: 0;
+  animation: fadeInLeft ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+.fade-in-top {
+  opacity: 0;
+  animation: fadeInTop ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+.fade-in-bottom {
+  opacity: 0;
+  animation: fadeInBottom ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY();
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX();
+  }
+}
+#app nav.navbar {
+  /*Animation*/
+  opacity: 0;
+  animation: fadeInTop ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+
+#app nav.navbar .navbar-brand {
+  font-family: var(--font-work-sans);
+  font-weight: 900;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  background: #00a2ff;
+  min-height: -webkit-fill-available;
+}
+.hero .overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0086ff;
+  background: linear-gradient(90deg, #0086ff 0%, #00c2ff 100%);
+  clip-path: polygon(0 0, 84% 0, 36% 100%, 0% 100%);
+}
+.hero .hero-title-1 {
+  font-size: 6rem;
+  font-weight: 900;
+  font-family: "Work Sans", sans-serif;
+  /*Animation*/
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+.hero .hero-title-2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  /*Animation*/
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+.hero .h-divide {
+  width: 130px;
+  border-bottom: 5px solid #fafafa;
+  /*Animation*/
+  opacity: 0;
+  animation-delay: 0.7s;
+}
+.hero .hero-msg {
+  width: 450px;
+  margin-top: 0.75rem;
+  /*Animation*/
+  opacity: 0;
+  animation-delay: 0.8s;
+}
+.hero .hero-actions {
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+  /*Animation*/
+  opacity: 0;
+  animation-delay: 0.9s;
+}
+.hero .hero-actions .btn-hero-donate {
+  border: 0px;
+  display: flex;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 25px;
+  padding: 0.45rem 1rem;
+  color: var(--white);
+  background: transparent;
+  border: 1px solid var(--white);
+  justify-content: space-between;
+  box-shadow: 5px 10px 20px rgba(40, 40, 40, 0.3);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.hero .hero-actions .btn-hero-donate:hover {
+  box-shadow: 5px 10px 20px rgba(40, 40, 40, 0.5);
+}
+.hero .hero-actions .btn-hero-donate .donate-icon {
+  margin-left: 3rem;
+  color: var(--primary-color);
+  /*Animation*/
+  animation-delay: 1.1s;
+}
+.hero .hero-actions .btn-hero-buy {
+  width: 12rem;
+  border-radius: 25px;
+  color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.8);
+}
+.hero .hero-socials {
+  margin-top: 2rem;
+  display: flex;
+}
+.hero .hero-socials .social-link {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  margin-left: 1rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.hero .hero-socials .social-link:first-child {
+  margin-left: 0rem;
+}
+.hero .hero-socials .social-link:hover {
+  background: #0086ff;
+  background: linear-gradient(90deg, #0086ff 0%, #00c2ff 100%);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.hero .hero-socials .social-twitter {
+  opacity: 0;
+  animation-delay: 0.9s;
+}
+.hero .hero-socials .social-facebook {
+  opacity: 0;
+  animation-delay: 1s;
+}
+.hero .hero-socials .social-instgram {
+  opacity: 0;
+  animation-delay: 1.1s;
+}
+.hero .hero-socials .social-youtube {
+  opacity: 0;
+  animation-delay: 1.2s;
+}
+.hero .hero-img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.hero .hero-img-container img {
+  margin-left: -2rem;
+}
+
+.hero-footer-copy {
+  font-size: 0.75rem;
+  margin-top: 5rem;
+  /* Animation */
+  animation-delay: 0s;
+}
+
+.hero-footer-copy .copy-date {
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.hero-footer-copy .copy-name {
+  font-weight: 900;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  background: #efefef;
+  height: 100%;
+}
